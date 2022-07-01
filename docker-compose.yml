@@ -1,0 +1,21 @@
+version: '4.10'
+services:
+  #service 1: definition of mongo database
+  mongo_db:
+    image: mongo:4.4.6
+    container_name: mongoDB
+    restart: always
+    ports:
+      - 27017:27017
+  #service 2: definition of spring-boot app
+  logger_service:
+    image: logger-service
+    container_name: logger-service-app
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      - mongo_db
