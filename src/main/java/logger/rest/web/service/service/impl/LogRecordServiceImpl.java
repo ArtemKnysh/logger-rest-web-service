@@ -3,12 +3,14 @@ package logger.rest.web.service.service.impl;
 import logger.rest.web.service.domain.LogRecord;
 import logger.rest.web.service.repository.LogRecordRepository;
 import logger.rest.web.service.service.LogRecordService;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@Service
 public class LogRecordServiceImpl implements LogRecordService {
 
     private final LogRecordRepository repository;

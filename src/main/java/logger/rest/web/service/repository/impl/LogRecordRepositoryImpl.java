@@ -5,12 +5,14 @@ import logger.rest.web.service.repository.LogRecordRepository;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@Repository
 public class LogRecordRepositoryImpl implements LogRecordRepository {
 
     private final MongoTemplate mongoTemplate;

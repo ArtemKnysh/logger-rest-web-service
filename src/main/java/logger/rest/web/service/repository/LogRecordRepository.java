@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@Repository
 public interface LogRecordRepository {
 
     List<LogRecord> findAllByUserId(String userId);
